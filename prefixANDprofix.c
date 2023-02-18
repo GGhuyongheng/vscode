@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 //#include<malloc.h>
 
 // 中缀转后缀**
@@ -161,7 +162,24 @@ char* postTOprefix(strStack S, char* str) {
     printf("%s\n", S->str[S->topOfStack]);
 }
 
+
+
 int main(void) {
+   int startIndex;
+   int wordCount;
+   char words[20][30];
+   scanf("%d\n%d", &startIndex, &wordCount);
+
+/*
+    char s[100][10];
+    int i = 0;
+    freopen("C:\\Users\\Administrator\\Desktop\\input.txt", "r", stdin);
+    while ((scanf("%[^ ]", s[i])) != EOF) {
+        printf("%s\n", s[i++]);
+        getchar();
+    }
+    */
+/*    
     char string[200];
     char outStr[200];
     Stack S;
@@ -174,6 +192,7 @@ int main(void) {
     postfix(S, string, outStr);
     postTOprefix(SS, outStr);
 
-    system("pause");
+*/
+  system("pause");
     return 0;
 }
