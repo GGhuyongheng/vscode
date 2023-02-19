@@ -61,6 +61,7 @@ int main(void) {
             c = words[j][strlen(words[j]) - 1];
         }
     }
+    printf("good!\n");
     printf("%s\n", ans);
     system("pause");
     return 0;
