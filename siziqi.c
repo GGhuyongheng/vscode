@@ -15,7 +15,11 @@ int main(void) {
         getchar();
         return -1;
     }
+    int N, M;
+    scanf("%d %d", &N, &M);
+    getchar();
     
+
     system("pause");
     return 0;
 }
