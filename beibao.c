@@ -4,12 +4,25 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <math.h>
+#include <unistd.h>
 //#include<malloc.h>
 
 int N, M;
 
 
 int main(void) {
+    pid_t pid = fork();
+    if (pid == -1) {
+        printf("失败！");
+    }
+    else if (pid == 0) {
+        printf("I am child, my pid：%d, ppid：%d\n",getpid(),getppid());
+        sleep(5);
+    }
+    else {
+        printf("I am father, my pid：%d, ppid：%d\n",getpid(),getppid());
+        sleep(5);
+    }
     FILE* fp = NULL;
     fp = fopen("C:\\Users\\Administrator\\Desktop\\input.txt", "r");
     if (fp == NULL) {
