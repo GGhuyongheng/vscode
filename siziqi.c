@@ -29,11 +29,11 @@ int checkWin(int **board, int row, int column) {
         if (count >= 3) return 1;
     }
     count = 0;
-    for (int i = column - 1, j = row - 1; i >=0 && j >= 0 && board[i][j] == p; i--, j--) {
+    for (int i = column - 1, j = row - 1; i >=0 && j >= 0 && board[j][i] == p; i--, j--) {
         count++;
         if (count > 3) return 1;
     }
-    for (int i = column + 1, j = row + 1; i < M && j < N && board[i][j] == p; i++, j++) {
+    for (int i = column + 1, j = row + 1; i < M && j < N && board[j][i] == p; i++, j++) {
         count++;
         if (count >= 3) return 1;
     }
